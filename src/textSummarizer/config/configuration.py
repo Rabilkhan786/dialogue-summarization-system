@@ -48,16 +48,19 @@ class ConfigurationManager:
         model_trainer_config=ModelTrainerConfig(
             root_dir=config.root_dir,
             data_path=config.data_path,
-            model_ckpt = config.model_ckpt,
-            num_train_epochs = params.num_train_epochs,
-            warmup_steps = params.warmup_steps,
-            per_device_train_batch_size = params.per_device_train_batch_size,
-            weight_decay = params.weight_decay,
-            logging_steps = params.logging_steps,
-            evaluation_strategy = params.evaluation_strategy,
-            eval_steps = params.evaluation_strategy,
-            save_steps = params.save_steps,
-            gradient_accumulation_steps = params.gradient_accumulation_steps
+            model_ckpt=config.model_ckpt,
+            num_train_epochs=params.num_train_epochs,
+            learning_rate=params.learning_rate,
+            per_device_train_batch_size=params.per_device_train_batch_size,
+            per_device_eval_batch_size=params.per_device_eval_batch_size,
+            gradient_accumulation_steps=params.gradient_accumulation_steps,
+            seed=params.seed,
+            optim=params.optim,
+            adam_beta1=params.adam_beta1,
+            adam_beta2=params.adam_beta2,
+            adam_epsilon=params.adam_epsilon,
+            lr_scheduler_type=params.lr_scheduler_type,
+            fp16=params.fp16
         )
         return model_trainer_config
     
