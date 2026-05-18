@@ -36,7 +36,7 @@ class ModelTrainer:
         ) 
         
         trainer = Seq2SeqTrainer(model=model_pegasus, args=trainer_args,
-                  tokenizer=tokenizer, data_collator=seq2seq_data_collator,
+                  processing_class=tokenizer, data_collator=seq2seq_data_collator,
                   train_dataset=dataset_samsum_pt["train"],
                   eval_dataset=dataset_samsum_pt["validation"])
         
