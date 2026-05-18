@@ -4,6 +4,7 @@ import torch
 from datasets import load_from_disk
 import os
 from src.textSummarizer.entity import ModelTrainerConfig
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 class ModelTrainer:
     def __init__(self, config: ModelTrainerConfig):
