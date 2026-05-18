@@ -14,19 +14,24 @@ class DataTransformationConfig:
     data_path: Path
     tokenizer_name: Path
 
+
+@dataclass
 class ModelTrainerConfig:
     root_dir: Path
     data_path: Path
-    model_ckpt: Path
+    model_ckpt: str
     num_train_epochs: int
-    warmup_steps: int
+    learning_rate: float
     per_device_train_batch_size: int
-    weight_decay: float
-    logging_steps: int
-    evaluation_strategy: str
-    eval_steps: int
-    save_steps: float
+    per_device_eval_batch_size: int
     gradient_accumulation_steps: int
+    seed: int
+    optim: str
+    adam_beta1: float
+    adam_beta2: float
+    adam_epsilon: float
+    lr_scheduler_type: str
+    fp16: bool
 
 @dataclass(frozen=True)
 class ModelEvaluationConfig:
