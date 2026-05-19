@@ -1,2 +1,9 @@
-.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+logs/
+*.db
+
+# ML model weights and training artifacts
 artifacts/

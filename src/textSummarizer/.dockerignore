@@ -1,0 +1,16 @@
+# Ignore the virtual environment crashing the build
+venv/
+.venv/
+Env/
+ENV/
+
+# Ignore Python cache files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local IDE settings and git history
+.git/
+.vscode/
+.idea/
