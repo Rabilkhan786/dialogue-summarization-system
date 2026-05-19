@@ -9,7 +9,6 @@ logging.basicConfig(level=logging.INFO,
 project_name = "dialogue-summarization-system"
 
 list_of_files=[
-    ".github/workflows/.gitkeep",
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/components/__init__.py",
     f"src/{project_name}/utils/__init__.py",
