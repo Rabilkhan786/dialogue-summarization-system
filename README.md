@@ -1,26 +1,41 @@
-# Text Summarization using Hugging Face Transformers
+# End-to-End Dialogue Summarization using Fine-Tuned Pegasus Model
 
 ## Overview
 
-This project is an end-to-end NLP application for abstractive dialogue summarization using the Pegasus transformer model from Hugging Face. The system generates concise and meaningful summaries from long conversational texts.
+This project is an end-to-end NLP application for dialogue summarization using the Pegasus transformer model from Hugging Face. A pre-trained Pegasus model was taken from Hugging Face and fine-tuned on a dialogue summarization dataset to generate concise and meaningful summaries from long conversational texts.
 
-The project follows a complete machine learning pipeline architecture including data ingestion, transformation, model training, evaluation, API development, Docker containerization, and cloud deployment.
+The project covers the complete machine learning lifecycle including:
+- Data Ingestion
+- Data Validation
+- Data Transformation
+- Model Fine-Tuning
+- Model Evaluation
+- Prediction Pipeline
+- FastAPI Integration
+- Docker Containerization
+- Cloud Deployment using Render
 
-The application is deployed using Docker and Render for scalable inference and easy accessibility.
+The application is deployed using Docker and Render for scalable inference and accessibility.
+
+---
+
+# Problem Statement
+
+Summarizing long conversations manually is time-consuming and inefficient. This project automates the summarization process using transformer-based deep learning models capable of generating abstractive summaries while preserving important contextual information.
 
 ---
 
 # Features
 
-- End-to-end NLP pipeline implementation
-- Dialogue summarization using Pegasus Transformer
-- Modular project architecture
+- Fine-tuned Pegasus transformer model
+- End-to-end training and prediction pipeline
+- Modular and scalable project architecture
 - YAML-based configuration management
-- Model training and evaluation pipeline
-- FastAPI integration for inference
+- FastAPI-based inference API
+- Batch prediction support
 - Docker containerization
 - Cloud deployment using Render
-- Batch prediction support
+- ROUGE score evaluation
 
 ---
 
@@ -36,13 +51,13 @@ The application is deployed using Docker and Render for scalable inference and e
    - Data Transformation
    - Model Trainer
    - Model Evaluation
-6. Build Pipelines
+6. Create Pipelines
    - Training Pipeline
    - Prediction Pipeline
-7. Develop FastAPI Application
+7. Build FastAPI Application
 8. Dockerize the Application
 9. Push Docker Image to Docker Hub
-10. Deploy using Render
+10. Deploy Application using Render
 
 ---
 
@@ -53,11 +68,24 @@ The application is deployed using Docker and Render for scalable inference and e
 | Programming Language | Python |
 | Deep Learning Framework | PyTorch |
 | NLP Framework | Hugging Face Transformers |
-| Model | Pegasus |
+| Pre-trained Model | Pegasus |
 | API Framework | FastAPI |
 | Containerization | Docker |
 | Deployment | Render |
 | Configuration | YAML |
+
+---
+
+# Model Fine-Tuning
+
+The pre-trained Pegasus model from Hugging Face was fine-tuned on a dialogue summarization dataset using Hugging Face Transformers and PyTorch.
+
+Training process included:
+- Data preprocessing and tokenization
+- Sequence-to-sequence fine-tuning
+- ROUGE score evaluation
+- Loss optimization
+- Model checkpointing
 
 ---
 
@@ -100,8 +128,8 @@ dialogue-summarization-system/
 ├── artifacts/
 ├── logs/
 ├── research/
-
-
+├── templates/
+└── static/
 ```
 
 ---
