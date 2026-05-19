@@ -7,3 +7,8 @@ logs/
 
 # ML model weights and training artifacts
 artifacts/
+
+# Ignore version typo files
+0.26.0
+0.26.0'
+0.26.0'`
